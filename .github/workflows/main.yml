@@ -12,10 +12,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Deploy to /var/www
+      - name: Deploy to /var/www/html
         run: |
-          echo "Deploying files to /var/www..."
-          sudo rm -rf /var/www/*
-          sudo cp -r . /var/www/
-          sudo chown -R www-data:www-data /var/www
+          echo "Deploying files to /var/www/html..."
+          sudo rm -rf /var/www/html*
+          sudo cp -r . /var/www/html/
+          sudo chown -R www-data:www-data /var/www/html
           echo "Deployment complete!"
